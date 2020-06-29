@@ -1,0 +1,24 @@
+{
+  "name": "gitdrafts",
+  "version": "1.0.0",
+  "description": "search breweries within the United States",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/charley81/gitDrafts.git"
+  },
+  "keywords": [
+    "beer",
+    "draft",
+    "brewery"
+  ],
+  "author": "Chris Harley",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/charley81/gitDrafts/issues"
+  },
+  "homepage": "https://github.com/charley81/gitDrafts#readme"
+}

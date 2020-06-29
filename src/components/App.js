@@ -1,9 +1,23 @@
+const Brewery = () => {
+  return React.createElement("div", {}, [
+    React.createElement('h1', {}, "Jailhouse Brewery"),
+    React.createElement('h2', {}, "Micro"),
+    React.createElement('h2', {}, "Hampton, GA"),
+  ])
+}
+
+
 const App = () => {
-  return (
-    <div>
-      <h1>Hello from App.js</h1>
-    </div>
-  )
+    return React.createElement(
+      "div",
+      {id: "something-important"},
+      React.createElement("h1", {}, "Drink Me!"),
+      [
+        React.createElement(Brewery),
+        React.createElement(Brewery),
+        React.createElement(Brewery),
+      ]
+    )
 }
 
 ReactDOM.render(React.createElement(App), document.getElementById('root'));
