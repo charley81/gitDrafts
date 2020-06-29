@@ -1,25 +1,16 @@
 import React from "react";
 import { render } from "react-dom";
-
-const Brewery = () => {
-  return React.createElement("div", {}, [
-    React.createElement("h1", {}, "Jailhouse Brewery"),
-    React.createElement("h2", {}, "Micro"),
-    React.createElement("h2", {}, "Hampton, GA"),
-  ]);
-};
+import Brewery from "./Brewery";
 
 const App = () => {
-  return React.createElement(
-    "div",
-    { id: "something-important" },
-    React.createElement("h1", {}, "Drink Me!"),
-    [
-      React.createElement(Brewery),
-      React.createElement(Brewery),
-      React.createElement(Brewery),
-    ]
+  return (
+    <div>
+      <h1>gitDrafts</h1>
+      <Brewery name="Jailhouse Brewery" location="Hampton, Ga" type="micro" />
+      <Brewery name="Arches Brewing" location="Hapeville, Ga" type="micro" />
+      <Brewery name="Sabbath Brewing" location="Atlanta, Ga" type="micro" />
+    </div>
   );
 };
 
-render(React.createElement(App), document.getElementById("root"));
+render(<App />, document.getElementById("root"));
