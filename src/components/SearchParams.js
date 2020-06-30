@@ -1,25 +1,24 @@
 import React, { useState, useEffect } from "react";
+import axios from "axios";
+import { states, types } from "../inputData";
 
 const SearchParams = () => {
-  const [location, setLocation] = useState("Atlanta, GA");
-  const [breweries, setBreweries] = useState([]);
+  const [data, setData] = useState();
+  const [location, setLocation] = useState("atlanta");
+  const [type, setType] = useState("micro");
 
   useEffect(() => {
-    fetch(`https://api.openbrewerydb.org/breweries/search?query=dog`, {
-      method: "GET",
-      headers: new Headers({
-        Accept: "application/vnd.github.cloak-preview",
-      }),
-    })
-      .then((res) => res.json())
-      .then((response) => {
-        setBreweries(response);
-      });
-  });
+    const fetchData = async () => {
+      const result = await axios("https://api.openbrewerydb.org/breweries");
+
+      setData(result.data);
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <div className="search-params">
-      <h1>{location}</h1>
       <form>
         <label htmlFor="location">
           location
@@ -30,6 +29,21 @@ const SearchParams = () => {
             placeholder="location"
             onChange={(e) => setLocation(e.target.value)}
           />
+        </label>
+        <label htmlFor="type">
+          Type
+          <select
+            name="type"
+            id="type"
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+            onBlur={(e) => setType(e.target.value)}
+          >
+            <option>All</option>
+            {types.map((brewery) => (
+              <option value={brewery}>{brewery}</option>
+            ))}
+          </select>
         </label>
         <button>Submit</button>
       </form>
