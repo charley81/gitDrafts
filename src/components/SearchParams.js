@@ -4,19 +4,20 @@ import { states, types } from "../inputData";
 
 const SearchParams = () => {
   const [data, setData] = useState();
-  const [location, setLocation] = useState("Atlanta");
-  const [type, setType] = useState("micro");
-  const [brewState, setBrewState] = useState("Georgia");
+  const [city, setCity] = useState("Atlanta");
+  const [search, setSearch] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
-      const result = await axios("https://api.openbrewerydb.org/breweries");
+      const result = await axios(
+        `https://api.openbrewerydb.org/breweries?by_city=${search}`
+      );
 
       setData(result.data);
     };
 
     fetchData();
-  }, []);
+  }, [search]);
 
   return (
     <div className="search-params">
@@ -26,12 +27,14 @@ const SearchParams = () => {
           <input
             type="text"
             id="location"
-            value="Enter A City..."
+            value={city}
             placeholder="Enter A City"
-            onChange={(e) => setLocation(e.target.value)}
+            onChange={(e) => setCity(e.target.value)}
           />
         </label>
-        <button>Submit</button>
+        <button type="button" onClick={() => setSearch(city)}>
+          Submit
+        </button>
       </form>
     </div>
   );
