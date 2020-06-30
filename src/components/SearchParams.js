@@ -40,8 +40,10 @@ const SearchParams = () => {
             onBlur={(e) => setType(e.target.value)}
           >
             <option>All</option>
-            {types.map((brewery) => (
-              <option value={brewery}>{brewery}</option>
+            {types.map((type) => (
+              <option key={type} value={type}>
+                {type}
+              </option>
             ))}
           </select>
         </label>
