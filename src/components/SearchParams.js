@@ -1,7 +1,21 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const SearchParams = () => {
   const [location, setLocation] = useState("Atlanta, GA");
+  const [breweries, setBreweries] = useState([]);
+
+  useEffect(() => {
+    fetch(`https://api.openbrewerydb.org/breweries/search?query=dog`, {
+      method: "GET",
+      headers: new Headers({
+        Accept: "application/vnd.github.cloak-preview",
+      }),
+    })
+      .then((res) => res.json())
+      .then((response) => {
+        setBreweries(response);
+      });
+  });
 
   return (
     <div className="search-params">
