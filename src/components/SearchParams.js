@@ -4,8 +4,9 @@ import { states, types } from "../inputData";
 
 const SearchParams = () => {
   const [data, setData] = useState();
-  const [location, setLocation] = useState("atlanta");
+  const [location, setLocation] = useState("Atlanta");
   const [type, setType] = useState("micro");
+  const [brewState, setBrewState] = useState("Georgia");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,33 +20,16 @@ const SearchParams = () => {
 
   return (
     <div className="search-params">
-      <form>
+      <form autoComplete="off">
         <label htmlFor="location">
           location
           <input
             type="text"
             id="location"
-            value={location}
-            placeholder="location"
+            value="Enter A City..."
+            placeholder="Enter A City"
             onChange={(e) => setLocation(e.target.value)}
           />
-        </label>
-        <label htmlFor="type">
-          Type
-          <select
-            name="type"
-            id="type"
-            value={type}
-            onChange={(e) => setType(e.target.value)}
-            onBlur={(e) => setType(e.target.value)}
-          >
-            <option>All</option>
-            {types.map((type) => (
-              <option key={type} value={type}>
-                {type}
-              </option>
-            ))}
-          </select>
         </label>
         <button>Submit</button>
       </form>

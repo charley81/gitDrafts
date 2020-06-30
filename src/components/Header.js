@@ -1,11 +1,12 @@
-import React from 'react'
+import React from "react";
+import { css } from "@emotion/core";
 
 const Header = () => {
   return (
-    <div className="header">
+    <header>
       <h1>gitDrafts</h1>
-    </div>
-  )
-}
+    </header>
+  );
+};
 
 export default Header;
