@@ -2,25 +2,28 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 
 const SearchParams = () => {
-  const [data, setData] = useState();
   const [city, setCity] = useState("Atlanta");
   const [search, setSearch] = useState("");
+  const [breweries, setBreweries] = useState([]);
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const result = await axios(
-        `https://api.openbrewerydb.org/breweries?by_city=${search}`
-      );
+  async function requestBreweries() {
+    const result = await axios(
+      `https://api.openbrewerydb.org/breweries?by_city=${city}`
+    );
 
-      setData(result.data);
-    };
-
-    fetchData();
-  }, [search]);
+    setBreweries(result.data || []);
+  }
 
   return (
     <div className="search-params">
-      <form autoComplete="off">
+      <form
+        autoComplete="off"
+        onSubmit={(e) => {
+          e.preventDefault();
+          setSearch(city);
+          requestBreweries();
+        }}
+      >
         <label htmlFor="location">
           location
           <input
@@ -31,9 +34,7 @@ const SearchParams = () => {
             onChange={(e) => setCity(e.target.value)}
           />
         </label>
-        <button type="button" onClick={() => setSearch(city)}>
-          Submit
-        </button>
+        <button type="submit">Submit</button>
       </form>
     </div>
   );
