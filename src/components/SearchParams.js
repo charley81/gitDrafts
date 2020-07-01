@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import Results from "./Results";
 
 const SearchParams = () => {
   const [city, setCity] = useState("Atlanta");
-  const [search, setSearch] = useState("");
   const [breweries, setBreweries] = useState([]);
 
   async function requestBreweries() {
@@ -36,6 +36,7 @@ const SearchParams = () => {
         </label>
         <button type="submit">Submit</button>
       </form>
+      <Results breweries={breweries} />
     </div>
   );
 };
