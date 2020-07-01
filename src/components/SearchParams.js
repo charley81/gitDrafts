@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { states, types } from "../inputData";
 
 const SearchParams = () => {
   const [data, setData] = useState();
