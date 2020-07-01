@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
 
@@ -20,7 +20,6 @@ const SearchParams = () => {
         autoComplete="off"
         onSubmit={(e) => {
           e.preventDefault();
-          setSearch(city);
           requestBreweries();
         }}
       >
