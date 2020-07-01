@@ -3,7 +3,9 @@ import React from "react";
 const Brewery = ({ name, location, type }) => {
   return (
     <div className="brewery">
-      <h3>Hello from brewery.js</h3>
+      <p>{name}</p>
+      <p>{location}</p>
+      <p>{type}</p>
     </div>
   );
 };
