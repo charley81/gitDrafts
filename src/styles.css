@@ -35,8 +35,8 @@ header {
   text-align: center;
 }
 
-.Header span {
-  color: red;
+header h1 {
+  color: #fff;
 }
 
 /* SearchParams */

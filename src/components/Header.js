@@ -1,10 +1,12 @@
 import React from "react";
-import { css } from "@emotion/core";
+import { Link } from "@reach/router";
 
 const Header = () => {
   return (
     <header>
-      <h1>gitDrafts</h1>
+      <Link to="/">
+        <h1>gitDrafts</h1>
+      </Link>
     </header>
   );
 };
