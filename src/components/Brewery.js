@@ -1,12 +1,25 @@
 import React from "react";
 
-const Brewery = ({ name, location, type }) => {
+const Brewery = ({
+  key,
+  name,
+  type,
+  street,
+  location,
+  postal_code,
+  country,
+  longitude,
+  latitude,
+  phone,
+  website_url,
+  id,
+}) => {
   return (
-    <div className="brewery">
-      <p>{name}</p>
-      <p>{location}</p>
-      <p>{type}</p>
-    </div>
+    <a href={`/details/${id}`} className="brewery">
+      <h1>{name}</h1>
+      <h2>{type}</h2>
+      <h2>{location}</h2>
+    </a>
   );
 };
 
