@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import { connect } from "react-redux";
 
 function Details({ id }) {
   const [brewery, setBrewery] = useState({});
