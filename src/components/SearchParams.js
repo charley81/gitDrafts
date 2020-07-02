@@ -1,14 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 import Results from "./Results";
+import { connect } from "react-redux";
+import changeCity from "../actionCreators/changeCity";
 
-const SearchParams = () => {
-  const [city, setCity] = useState("Atlanta");
+const SearchParams = (props) => {
+  // const [city, setCity] = useState("Atlanta");
   const [breweries, setBreweries] = useState([]);
 
   async function requestBreweries() {
     const result = await axios(
-      `https://api.openbrewerydb.org/breweries?by_city=${city}`
+      `https://api.openbrewerydb.org/breweries?by_city=${props.city}`
     );
 
     setBreweries(result.data || []);
@@ -28,9 +30,9 @@ const SearchParams = () => {
           <input
             type="text"
             id="location"
-            value={city}
+            value={props.city}
             placeholder="Enter A City"
-            onChange={(e) => setCity(e.target.value)}
+            onChange={(e) => props.setCity(e.target.value)}
           />
         </label>
         <button type="submit">Submit</button>
@@ -40,4 +42,12 @@ const SearchParams = () => {
   );
 };
 
-export default SearchParams;
+const mapStateToProps = ({ city }) => ({
+  city,
+});
+
+const mapDispatchToProps = (dispatch) => ({
+  setCity: (city) => dispatch(changeCity(city)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(SearchParams);

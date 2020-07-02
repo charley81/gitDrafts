@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
+import { connect } from "react-redux";
 
 function Details({ id }) {
   const [brewery, setBrewery] = useState({});
@@ -27,7 +28,7 @@ function Details({ id }) {
         <div className="details-info">
           <h1>{name}</h1>
           {street ? <h3>{street}</h3> : <h3>No Street Listed</h3>}
-          {city ? <h3>{city}</h3> : <h3>No City Listed</h3>}
+          {city ? <h3>{`${city}, ${state}`}</h3> : <h3>No City Listed</h3>}
           {phone ? <h3>{phone}</h3> : <h3>No Phone Listed</h3>}
           {website_url ? (
             <button type="button" value={website_url}>
