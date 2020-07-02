@@ -1,7 +1,6 @@
 import React from "react";
 
 const Brewery = ({
-  key,
   name,
   type,
   street,
