@@ -6,11 +6,19 @@ const Header = () => {
   return (
     <header
       css={css`
-        background-color: red;
+        background-color: #333;
+        text-align: center;
+        padding: 1rem;
       `}
     >
       <Link to="/">
-        <h1>gitDrafts</h1>
+        <h1
+          css={css`
+            color: #fff;
+          `}
+        >
+          gitDrafts
+        </h1>
       </Link>
     </header>
   );
