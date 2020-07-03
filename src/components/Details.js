@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
-import Map from "./Map";
+import BreweryMap from "./BreweryMap";
 
 function Details({ id }) {
   const [brewery, setBrewery] = useState({});
@@ -27,7 +27,7 @@ function Details({ id }) {
       ) : (
         <div className="details-info">
           <div className="map">
-            <Map />
+            <BreweryMap />
           </div>
           <h1>{name}</h1>
           {street ? <h3>{street}</h3> : <h3>No Street Listed</h3>}
