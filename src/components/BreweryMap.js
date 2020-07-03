@@ -1,4 +1,5 @@
 import React from "react";
+import { css } from "@emotion/core";
 import {
   GoogleMap,
   useLoadScript,
@@ -8,7 +9,7 @@ import {
 
 const libraries = ["places"];
 const mapContainerStyle = {
-  width: "500px",
+  width: "100%",
   height: "500px",
 };
 const center = {

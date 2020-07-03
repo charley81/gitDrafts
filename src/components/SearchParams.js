@@ -21,7 +21,7 @@ const SearchParams = (props) => {
     <div
       className="search-params"
       css={css`
-        max-width: 900px;
+        max-width: 700px;
         margin: auto;
         padding: 1rem;
       `}
