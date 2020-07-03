@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Axios from "axios";
 import BreweryMap from "./BreweryMap";
+import { css } from "@emotion/core";
 
 function Details({ id }) {
   const [brewery, setBrewery] = useState({});
