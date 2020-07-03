@@ -18,57 +18,9 @@ body {
 }
 
 a {
-  list-style: none;
-}
-
-li {
   text-decoration: none;
 }
 
-/* Utilities  */
-
-/* Header */
-/* header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-header h1 {
-  color: #fff;
-} */
-
-/* SearchParams */
-.search-params {
-  padding: 1rem;
-}
-
-.search-params form {
-  margin-top: 1rem;
-  text-align: center;
-}
-
-.search-params form label,
-.search-params form input,
-.search-params form button {
-  display: block;
-  width: 100%;
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  border-radius: 3px;
-}
-
-.search-params form button:hover {
-  background: #333;
-  color: #fff;
-}
-
-/* Brewery */
-.brewery {
-  display: block;
-  border: 1px solid #333;
-  margin: 1rem 0;
-  border-radius: 3px;
-  padding: 1rem;
+li {
+  list-style: none;
 }

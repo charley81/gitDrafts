@@ -6,15 +6,19 @@ const Header = () => {
   return (
     <header
       css={css`
-        background-color: #333;
+        padding: 2rem;
+        color: #fff;
         text-align: center;
-        padding: 1rem;
+        @media (min-width: 768px) {
+          text-align: left;
+        }
       `}
     >
       <Link to="/">
         <h1
           css={css`
-            color: #fff;
+            color: teal;
+            font-size: 3rem;
           `}
         >
           gitDrafts

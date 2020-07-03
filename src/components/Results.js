@@ -1,11 +1,24 @@
 import React from "react";
 import Brewery from "./Brewery";
+import { css } from "@emotion/core";
 
 function Results({ breweries }) {
   return (
-    <div className="search">
+    <div
+      className="search"
+      css={css`
+        text-align: left;
+        color: #ccc;
+      `}
+    >
       {!breweries.length ? (
-        <h1>No Breweries Found</h1>
+        <h3
+          css={css`
+            text-align: center;
+          `}
+        >
+          No Breweries Found
+        </h3>
       ) : (
         breweries.map((brewery) => (
           <Brewery

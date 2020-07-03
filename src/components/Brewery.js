@@ -1,4 +1,5 @@
 import React from "react";
+import { css } from "@emotion/core";
 
 const Brewery = ({
   name,
@@ -14,10 +15,19 @@ const Brewery = ({
   id,
 }) => {
   return (
-    <a href={`/details/${id}`} className="brewery">
-      <h1>{name}</h1>
-      <h2>{type}</h2>
-      <h2>{location}</h2>
+    <a
+      href={`/details/${id}`}
+      className="brewery"
+      css={css`
+        display: block;
+        margin: 1rem 0;
+        color: teal;
+        border-bottom: 1px dotted #ccc;
+      `}
+    >
+      <h3>{name}</h3>
+      <p>{type}</p>
+      <p>{location}</p>
     </a>
   );
 };
