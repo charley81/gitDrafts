@@ -23,8 +23,8 @@ const options = {
 
 function BreweryMap({ lat, lng }) {
   const center = {
-    lat: parseFloat(lat),
-    lng: parseFloat(lng),
+    lat: parseFloat(lat) || parseFloat(33.748997),
+    lng: parseFloat(lng) || parseFloat(-84.387985),
   };
 
   const { isLoaded, loadError } = useLoadScript({
