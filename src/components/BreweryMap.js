@@ -14,17 +14,18 @@ const mapContainerStyle = {
   width: "100%",
   height: "500px",
 };
-const center = {
-  lat: 33.748997,
-  lng: -84.387985,
-};
+
 const options = {
   styles: mapStyles,
   disableDefaultUI: true,
   zoomControl: true,
 };
 
-function BreweryMap() {
+function BreweryMap({ lat, lng }) {
+  const center = {
+    lat: parseFloat(lat),
+    lng: parseFloat(lng),
+  };
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries,

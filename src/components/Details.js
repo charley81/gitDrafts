@@ -60,7 +60,7 @@ function Details({ id }) {
         <div className="loading">Loading ...</div>
       ) : (
         <div>
-          <BreweryMap />
+          <BreweryMap lat={brewery.latitude} lng={brewery.longitude} />
           <div className="details-info" css={css``}>
             <h1>{name}</h1>
             {street ? <h3>{street}</h3> : <h3>No Street Listed</h3>}
