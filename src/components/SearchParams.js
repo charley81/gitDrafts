@@ -4,6 +4,7 @@ import Results from "./Results";
 import { connect } from "react-redux";
 import changeCity from "../actionCreators/changeCity";
 import { css } from "@emotion/core";
+import { colors } from "../styles";
 
 const SearchParams = (props) => {
   // const [city, setCity] = useState("Atlanta");
@@ -21,16 +22,15 @@ const SearchParams = (props) => {
     <div
       className="search-params"
       css={css`
-        max-width: 700px;
-        margin: auto;
-        padding: 1rem;
-
         form {
           margin: 2rem 0;
+          @media (min-width: 500px) {
+            margin: 6rem 0;
+          }
 
           label {
             display: block;
-            color: #ccc;
+            font-size: 2rem;
           }
 
           input {
@@ -38,11 +38,17 @@ const SearchParams = (props) => {
             width: 100%;
             outline: none;
             border: none;
-            border-bottom: 1px solid teal;
-            margin-top: 1rem;
+            background: transparent;
+            border-bottom: 1px solid ${colors.primaryColor};
             text-align: center;
             font-size: 1.3rem;
             font-family: "Poppins", sans-serif;
+            color: ${colors.medColor};
+            ::placeholder {
+              /* Chrome, Firefox, Opera, Safari 10.1+ */
+              color: ${colors.medColor};
+              opacity: 1; /* Firefox */
+            }
           }
 
           button {
@@ -54,12 +60,10 @@ const SearchParams = (props) => {
             outline: none;
             border: 1px solid teal;
             font-size: 1.1rem;
-            background-color: #fff;
+            background: transparent;
+            border: 1px solid ${colors.primaryColor};
             cursor: pointer;
-            &:hover {
-              background: teal;
-              color: #fff;
-            }
+            color: ${colors.primaryColor};
           }
         }
       `}
@@ -72,9 +76,7 @@ const SearchParams = (props) => {
         }}
       >
         <label htmlFor="location">
-          location
           <input
-            value={props.city}
             type="text"
             id="location"
             placeholder="Enter A City"

@@ -1,5 +1,6 @@
 import React from "react";
 import { css } from "@emotion/core";
+import { colors } from "../styles";
 
 const Brewery = ({
   name,
@@ -21,8 +22,8 @@ const Brewery = ({
       css={css`
         display: block;
         margin: 1rem 0;
-        color: teal;
-        border-bottom: 1px dotted #ccc;
+        color: ${colors.primaryColor};
+        border-bottom: 1px dotted ${colors.medColor};
       `}
     >
       <h3>{name}</h3>

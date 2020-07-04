@@ -1,4 +1,4 @@
-[
+export const mapStyles = [
   {
     featureType: "landscape.natural",
     elementType: "geometry.fill",
@@ -69,3 +69,10 @@
     ],
   },
 ];
+
+export const colors = {
+  primaryColor: "teal",
+  darkColor: "#333",
+  lightColor: "#fff",
+  medColor: "#ccc",
+};

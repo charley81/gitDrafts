@@ -7,6 +7,7 @@ import SearchParams from "./SearchParams";
 import Details from "./Details";
 import store from "../store";
 import { css } from "@emotion/core";
+import { colors } from "../styles";
 
 const App = () => {
   return (
@@ -14,9 +15,11 @@ const App = () => {
       <React.StrictMode>
         <div
           css={css`
-            background: teal;
             height: 100vh;
-            color: #fff;
+            color: ${colors.primaryColor};
+            max-width: 800px;
+            margin: auto;
+            padding: 1rem;
           `}
         >
           <Header />

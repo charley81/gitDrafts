@@ -1,6 +1,7 @@
 import React from "react";
 import Brewery from "./Brewery";
 import { css } from "@emotion/core";
+import { colors } from "../styles";
 
 function Results({ breweries }) {
   return (
@@ -8,17 +9,10 @@ function Results({ breweries }) {
       className="search"
       css={css`
         text-align: left;
-        color: #ccc;
       `}
     >
       {!breweries.length ? (
-        <h3
-          css={css`
-            text-align: center;
-          `}
-        >
-          No Breweries Found
-        </h3>
+        <h3>No Breweries Found</h3>
       ) : (
         breweries.map((brewery) => (
           <Brewery
