@@ -24,47 +24,28 @@ const SearchParams = (props) => {
         max-width: 700px;
         margin: auto;
         padding: 1rem;
-      `}
-    >
-      <form
-        css={css`
+
+        form {
           margin: 2rem 0;
-        `}
-        autoComplete="off"
-        onSubmit={(e) => {
-          e.preventDefault();
-          requestBreweries();
-        }}
-      >
-        <label
-          css={css`
+
+          label {
             display: block;
             color: #ccc;
-          `}
-          htmlFor="location"
-        >
-          location
-          <input
-            css={css`
-              display: block;
-              width: 100%;
-              outline: none;
-              border: none;
-              border-bottom: 1px solid teal;
-              margin-top: 1rem;
-              text-align: center;
-              font-size: 1.3rem;
-              font-family: "Poppins", sans-serif;
-            `}
-            value={props.city}
-            type="text"
-            id="location"
-            placeholder="Enter A City"
-            onChange={(e) => props.setCity(e.target.value)}
-          />
-        </label>
-        <button
-          css={css`
+          }
+
+          input {
+            display: block;
+            width: 100%;
+            outline: none;
+            border: none;
+            border-bottom: 1px solid teal;
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.3rem;
+            font-family: "Poppins", sans-serif;
+          }
+
+          button {
             margin-top: 1rem;
             display: block;
             padding: 0.5rem;
@@ -79,11 +60,28 @@ const SearchParams = (props) => {
               background: teal;
               color: #fff;
             }
-          `}
-          type="submit"
-        >
-          Submit
-        </button>
+          }
+        }
+      `}
+    >
+      <form
+        autoComplete="off"
+        onSubmit={(e) => {
+          e.preventDefault();
+          requestBreweries();
+        }}
+      >
+        <label htmlFor="location">
+          location
+          <input
+            value={props.city}
+            type="text"
+            id="location"
+            placeholder="Enter A City"
+            onChange={(e) => props.setCity(e.target.value)}
+          />
+        </label>
+        <button type="submit">Submit</button>
       </form>
       <Results breweries={breweries} />
     </div>

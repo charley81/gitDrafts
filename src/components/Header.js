@@ -12,17 +12,15 @@ const Header = () => {
         @media (min-width: 768px) {
           text-align: left;
         }
+
+        h1 {
+          color: #fff;
+          font-size: 3rem;
+        }
       `}
     >
       <Link to="/">
-        <h1
-          css={css`
-            color: teal;
-            font-size: 3rem;
-          `}
-        >
-          gitDrafts
-        </h1>
+        <h1>gitDrafts</h1>
       </Link>
     </header>
   );

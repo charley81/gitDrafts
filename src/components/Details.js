@@ -27,6 +27,7 @@ function Details({ id }) {
       css={css`
         max-width: 700px;
         margin: auto;
+        padding: 0 1rem;
       `}
     >
       {isLoading ? (

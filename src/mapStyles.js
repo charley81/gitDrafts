@@ -1,4 +1,4 @@
-export default [
+[
   {
     featureType: "landscape.natural",
     elementType: "geometry.fill",

@@ -6,12 +6,19 @@ import Header from "./Header";
 import SearchParams from "./SearchParams";
 import Details from "./Details";
 import store from "../store";
+import { css } from "@emotion/core";
 
 const App = () => {
   return (
     <Provider store={store}>
       <React.StrictMode>
-        <div>
+        <div
+          css={css`
+            background: teal;
+            height: 100vh;
+            color: #fff;
+          `}
+        >
           <Header />
           <Router>
             <SearchParams path="/" />

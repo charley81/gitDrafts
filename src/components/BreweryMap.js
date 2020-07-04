@@ -1,10 +1,11 @@
 import React from "react";
+import mapStyles from "../mapStyles";
 import { css } from "@emotion/core";
 import {
   GoogleMap,
   useLoadScript,
-  Marker,
-  InfoWindow,
+  // Marker,
+  // InfoWindow,
 } from "@react-google-maps/api";
 
 const libraries = ["places"];
@@ -15,6 +16,11 @@ const mapContainerStyle = {
 const center = {
   lat: 33.748997,
   lng: -84.387985,
+};
+const options = {
+  styles: mapStyles,
+  disableDefaultUI: true,
+  zoomControl: true,
 };
 
 function BreweryMap() {
@@ -31,6 +37,7 @@ function BreweryMap() {
         mapContainerStyle={mapContainerStyle}
         zoom={8}
         center={center}
+        options={options}
       ></GoogleMap>
     </div>
   );
