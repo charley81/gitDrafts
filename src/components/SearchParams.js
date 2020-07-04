@@ -64,6 +64,10 @@ const SearchParams = (props) => {
             border: 1px solid ${colors.primaryColor};
             cursor: pointer;
             color: ${colors.primaryColor};
+            &:hover {
+              background: ${colors.primaryColor};
+              color: ${colors.lightColor};
+            }
           }
         }
       `}

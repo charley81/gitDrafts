@@ -1,6 +1,7 @@
 import React from "react";
-import mapStyles from "../styles";
+import { mapStyles } from "../styles";
 import { css } from "@emotion/core";
+
 import {
   GoogleMap,
   useLoadScript,
