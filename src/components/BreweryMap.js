@@ -5,7 +5,7 @@ import { css } from "@emotion/core";
 import {
   GoogleMap,
   useLoadScript,
-  // Marker,
+  Marker,
   // InfoWindow,
 } from "@react-google-maps/api";
 
@@ -26,6 +26,7 @@ function BreweryMap({ lat, lng }) {
     lat: parseFloat(lat),
     lng: parseFloat(lng),
   };
+
   const { isLoaded, loadError } = useLoadScript({
     googleMapsApiKey: process.env.REACT_APP_GOOGLE_MAPS_API_KEY,
     libraries,
@@ -37,10 +38,12 @@ function BreweryMap({ lat, lng }) {
     <div>
       <GoogleMap
         mapContainerStyle={mapContainerStyle}
-        zoom={8}
+        zoom={15}
         center={center}
         options={options}
-      ></GoogleMap>
+      >
+        <Marker position={center} />
+      </GoogleMap>
     </div>
   );
 }
