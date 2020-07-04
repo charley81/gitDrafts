@@ -1,7 +1,6 @@
 import React from "react";
 import Brewery from "./Brewery";
 import { css } from "@emotion/core";
-import { colors } from "../styles";
 
 function Results({ breweries }) {
   return (
