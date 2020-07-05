@@ -8,6 +8,8 @@
 
 gitDrafts is a simple user friendly website to show breweries within a city and their contact information i.e address, phone, website and Google a Google map showing their location.
 
+![Alt Text](https://media.giphy.com/media/fr54P4120vEVNAoWha/giphy.gif)
+
 ## Prerequisites
 
 Before you begin, ensure you have met the following requirements:
@@ -27,6 +29,8 @@ npm install
 npm run dev
 ```
 
+## Using
+
 Open http://localhost:1234
 
 ## Contributing to gitDrafts
@@ -45,9 +49,7 @@ Alternatively see the GitHub documentation on [creating a pull request](https://
 
 Thanks to the following people who have contributed to this project:
 
-- [@scottydocs](https://github.com/scottydocs) 📖
-- [@cainwatson](https://github.com/cainwatson) 🐛
-- [@calchuchesta](https://github.com/calchuchesta) 🐛
+- [@charley81](https://github.com/charley81) 📖
 
 You might want to consider using something like the [All Contributors](https://github.com/all-contributors/all-contributors) specification and its [emoji key](https://allcontributors.org/docs/en/emoji-key).
 
