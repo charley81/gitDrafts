@@ -3,6 +3,7 @@ import Axios from "axios";
 import BreweryMap from "./BreweryMap";
 import { css } from "@emotion/core";
 import { colors } from "../styles";
+import { navigate } from "@reach/router";
 
 function Details({ id }) {
   const [brewery, setBrewery] = useState({});
@@ -21,6 +22,7 @@ function Details({ id }) {
   }, [id]);
 
   const { name, street, city, state, phone, website_url } = brewery;
+  const viewSite = () => navigate(website_url);
 
   return (
     <div
@@ -67,7 +69,7 @@ function Details({ id }) {
             {city ? <h3>{`${city}, ${state}`}</h3> : <h3>No City Listed</h3>}
             {phone ? <h3>{phone}</h3> : <h3>No Phone Listed</h3>}
             {website_url ? (
-              <button type="button" value={website_url}>
+              <button type="button" onClick={viewSite} value={website_url}>
                 View Website
               </button>
             ) : (
