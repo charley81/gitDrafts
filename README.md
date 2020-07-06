@@ -8,6 +8,8 @@
 
 gitDrafts is a simple user friendly website to show breweries within a city and their contact information i.e address, phone, website and Google a Google map showing their location.
 
+[View Site](https://gitdrafts.netlify.app/)
+
 ![Alt Text](https://media.giphy.com/media/fr54P4120vEVNAoWha/giphy.gif)
 
 ## Prerequisites
