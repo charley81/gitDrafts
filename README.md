@@ -4,7 +4,7 @@
 ![GitHub contributors](https://img.shields.io/github/contributors/charley81/gitDrafts)
 ![GitHub stars](https://img.shields.io/github/stars/charley81/gitDrafts?style=social)
 ![GitHub forks](https://img.shields.io/github/forks/charley81/gitDrafts?style=social)
-![Twitter Follow](https://img.shields.io/twitter/follow/charley81?style=social)
+![Twitter Follow](https://img.shields.io/twitter/follow/chrisharley81?style=social)
 
 gitDrafts is a simple user friendly website to show breweries within a city and their contact information i.e address, phone, website and Google a Google map showing their location.
 
