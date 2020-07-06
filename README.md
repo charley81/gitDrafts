@@ -55,7 +55,7 @@ Thanks to the following people who have contributed to this project:
 
 ## Contact
 
-If you want to contact me you can reach me at <charley81.com>.
+If you want to contact me you can reach me at [charley81.com](charley81.com).
 
 ## License
 
