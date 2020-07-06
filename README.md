@@ -53,8 +53,6 @@ Thanks to the following people who have contributed to this project:
 
 - [@charley81](https://github.com/charley81) 📖
 
-You might want to consider using something like the [All Contributors](https://github.com/all-contributors/all-contributors) specification and its [emoji key](https://allcontributors.org/docs/en/emoji-key).
-
 ## Contact
 
 If you want to contact me you can reach me at <charley81.com>.
